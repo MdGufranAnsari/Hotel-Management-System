@@ -1,0 +1,160 @@
+#include <stdio.h>
+#include <windows.h>
+
+int deluxe(int num)
+{
+    printf("The cost of deluxe room per person is %d\n", num * 2000);
+    printf("This rooms comes with a basic view from a window.\nA comfortable size bed.\nFree wifi\nHot running water 24X7\n\n\n");
+}
+int premium(int num)
+{
+
+    printf("The cost of premium room per person is %dpernight\n", num * 4000);
+    printf("It comes with a great view from window as well as balcony.\nFree wifi\nA twin size bed\nAir conditioning\nLED tv + Netflix\nHot running water 24X7.\n\n\n");
+}
+int luxury(int num)
+
+{
+    printf("The cost of luxury room per person is %d\n", num * 6000);
+    printf("It is one of the best room of our Hotel.\nIt comes with all the facilities of the the above rooms included.\nFREE lunch and Dinner as complemenatary.\nA personal cab available for sightseeing.\n\n\n");
+}
+int receipt(int num)
+{  Beep(1000, 1000);
+Sleep(1000);
+
+    printf(" \n\n\n     HOTEL NAZARA\n\nYour booking is successful\n");
+
+    printf("*Total guests are %d\n", num * 2);
+    printf("*Your room no. is %d\n", num + 200);
+    printf("*Your Total amount is%d\n", num * 2000);
+    printf("*This booking is valid only for 24 hour only.\n");
+    printf("*For any assistance please contact us at : 9990518959; 9026475321.\n");
+    // no. peoples , room type , room name, total booking amount, valid till , hotel phone no....
+}
+int Conditions(int num)
+{
+    printf("Terms and Conditions for Hotel Nazara/nPlease read these Terms and Conditions carefully before making a reservation or staying at Hotel Nazara. By making a reservation or staying at Hotel Nazara, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these Terms and Conditions, you should not make a reservation or stay at Hotel Nazara/nReservation and Payment: All reservations at Hotel Nazara are subject to availability and confirmation. To secure a reservation, a valid credit card or other acceptable form of payment may be required at the time of booking. Payment for the entire reservation may be charged at the time of booking or upon check-in, as per the hotel's policy. Any additional charges incurred during the stay, such as room service, minibar, or damages, must be paid at the time of check-out.\nCancellation and No-show: Cancellation policies may vary depending on the rate plan and time of booking. Please refer to the specific cancellation policy mentioned during the booking process. In case of a no-show, where the guest fails to arrive without prior notice, Hotel Nazara reserves the right to charge for the full reservation amount or apply the cancellation policy.\nCheck-in and Check-out: Check-in time at Hotel Nazara is typically after 2:00 PM, and check-out time is before 12:00 PM, unless otherwise stated. Early check-in and late check-out requests are subject to availability and may incur additional charges.\nGuest Responsibilities: Guests are responsible for providing valid identification at the time of check-in and for ensuring the accuracy of their reservation details. Guests are also responsible for any damages or losses caused to the hotel property during their stay and may be charged for any such damages or losses. Smoking, illegal drugs, and loud noises are strictly prohibited in the hotel premises.\nChildren and Extra Guests: Children under a certain age, as specified by the hotel, may stay free of charge using existing bedding. Extra guests, including children above a certain age, may be subject to additional charges, as per the hotel's policy. Please refer to the hotel's specific policy for details.\nServices and Amenities: Hotel Nazara strives to provide a comfortable and enjoyable stay for all guests. However, the availability and quality of services and amenities may vary depending on factors such as weather conditions, maintenance, or other unforeseen circumstances. Hotel Nazara reserves the right to alter or suspend services or amenities without prior notice.\nLiability: Hotel Nazara shall not be liable for any loss, damage, or injury to guests or their belongings, including but not limited to theft, fire, natural disasters, accidents, or any other unforeseen events. Guests are advised to use hotel facilities, including the swimming pool, fitness center, or other amenities, at their own risk.\nPrivacy: Hotel Nazara respects the privacy of its guests and complies with applicable privacy laws. Please refer to the hotel's privacy policy for details on the collection, use, and disclosure of personal information.");
+}
+int main()
+
+{
+    int num;
+    int opt;
+    printf("Welcome to the *Hotel NAZARA*\n\nIf you want to book a room in our hotel\n\n");
+    printf("*Press 1 for 2 Guests.\n*Press 2 for 2 to 4 Guests\n*Press 3for more than 4 Guests\n");
+    scanf("%d", &num);
+
+    if (num == 1) // Yahaan num ko hamne comppare kiya haiii
+    {
+
+        deluxe(num);  // deluxe function call
+        premium(num); // premium function call
+        luxury(num);  // luxury function call
+        printf("*Press 4 for  Deluxe room\n");
+        printf("*Press 5 for  Premium room\n");
+        printf("*Press 6 for  Luxury room\n");
+        scanf("%d", &opt);
+        if (opt == 4)
+        {
+          
+            printf(" Congratulations! You are alloted with Deluxe room\n");
+            receipt(num);
+        }
+
+        else if (opt == 5)
+        {
+            num = 2; // yahaan num ki value fix kr di haiii
+            printf("Congratulations! You are alloted with Premium room\n");
+            receipt(num);
+        }
+
+        else if (opt == 6)
+        {
+            num = 3;
+            printf("Congratulations! you are alloted with luxury room\n");
+            receipt(num);
+        }
+    }
+
+    else if (num == 2)
+    {
+        deluxe(num);  // deluxe function call
+        premium(num); // premium function call
+        luxury(num);  // luxury function call})
+        printf("*Press 4 for  Deluxe room\n ");
+        printf("*Press 5 for  Premium room\n ");
+        printf("*Press 6 for  Luxury room\n ");
+        scanf("%d", &opt);
+        if (opt == 4)
+        {
+            printf("Congratulations! You are alloted with our Deluxe room\n");
+            receipt(num);
+        }
+
+        else if (opt == 5)
+        {
+            num = 4;
+            printf("Congratulations! You are alloted with Premium room\n");
+            receipt(num);
+        }
+
+        else if (opt == 6)
+        {
+            num = 6;
+            printf("Congratulations! you are alloted with Luxury room\n");
+            receipt(num);
+        }
+    }
+    else if (num == 3)
+    {
+        deluxe(num);  // deluxe function call
+        premium(num); // premium function call
+        luxury(num);  // luxury function call
+        printf("*Press 4 for  Deluxe room\n\n ");
+        printf("*Press 5 for  Premium room \n\n");
+        printf("*Press 6 for  Luxury room\n\n ");
+        scanf("%d", &opt);
+        if (opt == 4)
+        {
+            num = 3;
+            printf("Congratulations! you are alloted with our Deluxe room\n");
+            receipt(num);
+        }
+
+        else if (opt == 5)
+        {
+            num = 6;
+            printf("Congratulations! you are alloted with Premium room\n");
+            receipt(num);
+        }
+
+        else if (opt == 6)
+        {
+            num = 9;
+            printf("Congratulations! you are alloted with Luxury room\n");
+            receipt(num);
+        }
+    }
+
+    printf("Press 100 in case of emergency\n");
+    scanf("%d", &num);
+    if (num == 100)
+    { for (int i = 0; i <20; i++)
+    {
+        /* code */
+        Beep(1600, 600);
+        Sleep(300);
+    }
+    
+        
+          
+    }
+    printf("\nPress 0 for T&C\n");
+    scanf("%d", &num);
+    if (num == 0)
+    {
+        Conditions(num);
+    }
+
+    return 0;
+}
